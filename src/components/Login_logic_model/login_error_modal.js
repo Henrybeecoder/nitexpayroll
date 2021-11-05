@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import './login-error.css'
+import './CSS/login-error.css'
 
 const LoginErrorModal = ({ modalContent, closeModal }) => {
     useEffect(() => {
