@@ -1,11 +1,13 @@
 .login-screen {
     width: 70%;
+    height: 100vh
 }
 .login-text {
     color: #234D6C;
     font-size: 30px;
     font-weight: 700;
-    line-height: 35.15px
+    line-height: 35.15px;
+    margin: 20px 0 0 0
 }
 .onboard {
     font-size: 18px;
@@ -16,6 +18,7 @@
     color: #234D6C;
     font-size: 40px;
     line-height: 10px;
+    padding: 20px 0;
 }
 .google-sign-in {
     background: transparent;
@@ -25,17 +28,63 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 400;
     cursor: pointer;
+    padding: 7px 0;
+    border-radius: 7px;
+    margin: 30px 0;
 }
 .google-sign-in img {
     width: 8%;
     margin: 0 20px 0 0;
+    
+}
+form {
+    height: 60vh;
+    margin-top: 30px;
+    position: relative;
+}
+form button {
+    width: 100%;
+    background: #54a8c4;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    padding: 20px 0;
+    cursor: pointer;
 }
 input {
     width: 100%;
-    padding: 20px 0 20px 40px
+    padding: 20px 0 20px 30px;
+    border: 1px solid #54a8c4;
+    border-radius: 7px;
+    margin: 10px 0 
+}
+input:focus {
+    outline: none;
+    border: 2px solid #54a8c4;
+}
+::placeholder {
+ color: #999999;
+}
+label {
+    color: #999999;
+}
+
+hr {
+    margin-top: 10px
+}
+.remember-me {
+    display:flex;
+    
+}
+.email-check {
+    position: absolute;
+    width: 6%;
+    left: 90%;
+    top: 10%
 }
 @media screen and (max-width: 800px) {
     .login-screen {

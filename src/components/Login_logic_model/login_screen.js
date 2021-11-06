@@ -29,30 +29,31 @@ function LoginForm() {
 
     };
 
-const formSubmit = (e) => {
-    e.preventDefault()
-    setEmail(e.target.value)
- if (validator.isEmail(email)) {
-      dispatch({type: 'VALID_EMAIL'})
- }
-  else {
+    const formSubmit = (e) => {
+        e.preventDefault()
+        setEmail(e.target.value)
+        const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        if (email && regex.test(email)) {
+            dispatch({ type: 'VALID_EMAIL' })
+        }
+        else {
             dispatch({ type: 'INVALID_EMAIL' });
             setEmail(e.target.value)
         }
-}
+    }
 
     const onEmailType = (e) => {
 
         setEmail(e.target.value)
-
-        if (validator.isEmail(email)) {
+        const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        if (email && regex.test(email)) {
 
             setEmailCheck(true)
         }
         else {
-            setEmailCheck(true)
+            setEmailCheck(false)
         }
-       
+
     };
     const closeModal = () => {
         dispatch({ type: 'CLOSE_MODAL' });
@@ -62,16 +63,16 @@ const formSubmit = (e) => {
         <div className="login-screen">
             <LoginContent>
                 <p className="top-dots">..... <br /> .....</p >
-                <p className = "login-text">Login</p>
+                <p className="login-text">Login</p>
                 <p className="onboard">Get onboard with our new login screen...</p>
                 <button className="google-sign-in">
                     <img src='/image/icons8-google-48.png' alt="Google icon" />
                     Sign in with Google
                 </button>
                 <Flex>
-                    <hr size="2" width="16%" color="#CCCCCC" />
+                    <hr size="2" width="40%" color="#CCCCCC" />
                     <FadeText>or sign in with email</FadeText>
-                    <hr size="2" width="16%" color="#CCCCCC" />
+                    <hr size="2" width="35%" color="#CCCCCC" />
                 </Flex>
                 <form onSubmit={formSubmit}>
                     <label className="email-label">
@@ -83,7 +84,7 @@ const formSubmit = (e) => {
                         value={email}
                         onChange={onEmailType}
                     />
-                    {emailcheck && (<img src="/svg/icons8-checked-50.png" class="email-check" />)}
+                    {emailcheck && (<img src="/image/icons8-checked-50.png" class="email-check" />)}
                     {state.isModalOpen && (
                         <LoginErrorModal closeModal={closeModal} modalContent={state.modalContent} />
                     )}
@@ -93,7 +94,7 @@ const formSubmit = (e) => {
                     <input
                         type="password"
                         value={password}
-                        placeholder = "Enter password"
+                        placeholder="Enter password"
                         onChange={(e) => setPassword(e.target.value)}
                     />
                     <CheckBox>
@@ -118,11 +119,11 @@ const Flex = styled.div`
     `
 const FadeText = styled.p`
 color: #666666;
-padding: 0 20px;
+padding: 0 5px;
 font-size: 13px;
 `
 const LoginContent = styled.div`
-width: 50%;
+width: 60%;
 margin-left: 130px;
 @media screen and (max-width: 800px) {
     width: 85%;

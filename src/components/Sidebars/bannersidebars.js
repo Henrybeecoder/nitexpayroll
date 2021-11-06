@@ -19,6 +19,9 @@ const Sidebar = styled.div`
 width: 30%;
 height: 100vh;
 background: #54a8c4;
+position: absolute;
+right: 0px;
+padding: 10px;
 @media screen and (max-width: 800px) {
     display:none
 }
