@@ -1,16 +1,16 @@
 import React, { useState, useReducer, useEffect } from 'react'
-import './login_screen.css'
-import BannerSidebar from '../sidebar/bannersidebar'
+import Bannersidebars from '../Sidebars/bannersidebars'
 import styled from 'styled-components'
 import LoginErrorModal from './login_error_modal'
 import { reducer } from './reducer'
 import validator from 'validator'
+import '../CSS/login_screen.css'
 
 export default function LoginScreen() {
     return (
         <Flex>
             <LoginForm />
-            <BannerSidebar />
+            <Bannersidebars />
         </Flex>
     )
 }
@@ -62,10 +62,10 @@ const formSubmit = (e) => {
         <div className="login-screen">
             <LoginContent>
                 <p className="top-dots">..... <br /> .....</p >
-                <h3>Login</h3>
+                <p className = "login-text">Login</p>
                 <p className="onboard">Get onboard with our new login screen...</p>
                 <button className="google-sign-in">
-                    <img src='/svg/icons8-google-48.png' alt="Google icon" />
+                    <img src='/image/icons8-google-48.png' alt="Google icon" />
                     Sign in with Google
                 </button>
                 <Flex>
@@ -79,7 +79,7 @@ const formSubmit = (e) => {
                     </label>
                     <input
                         type="text"
-                        placeholder="johnkachi@example.com"
+                        placeholder="Enter email"
                         value={email}
                         onChange={onEmailType}
                     />
@@ -93,6 +93,7 @@ const formSubmit = (e) => {
                     <input
                         type="password"
                         value={password}
+                        placeholder = "Enter password"
                         onChange={(e) => setPassword(e.target.value)}
                     />
                     <CheckBox>
@@ -121,11 +122,10 @@ padding: 0 20px;
 font-size: 13px;
 `
 const LoginContent = styled.div`
-width: 90%;
+width: 50%;
 margin-left: 130px;
 @media screen and (max-width: 800px) {
-    width: 100%;
-    
+    width: 85%;
     margin: 0 20px
 }
 `

@@ -1,0 +1,44 @@
+.login-screen {
+    width: 70%;
+}
+.login-text {
+    color: #234D6C;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 35.15px
+}
+.onboard {
+    font-size: 18px;
+    font-weight: 300;
+    color: #666666;
+}
+.top-dots {
+    color: #234D6C;
+    font-size: 40px;
+    line-height: 10px;
+}
+.google-sign-in {
+    background: transparent;
+    outline: none;
+    border: 1px solid #54a8c4;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.google-sign-in img {
+    width: 8%;
+    margin: 0 20px 0 0;
+}
+input {
+    width: 100%;
+    padding: 20px 0 20px 40px
+}
+@media screen and (max-width: 800px) {
+    .login-screen {
+        width: 100%;
+    }
+}
