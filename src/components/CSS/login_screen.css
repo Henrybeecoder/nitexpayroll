@@ -10,7 +10,7 @@
     margin: 20px 0 0 0
 }
 .onboard {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 300;
     color: #666666;
 }
@@ -76,10 +76,7 @@ label {
 hr {
     margin-top: 10px
 }
-.remember-me {
-    display:flex;
-    
-}
+
 .email-check {
     position: absolute;
     width: 6%;

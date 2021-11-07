@@ -138,7 +138,7 @@ width: 100%;
 justify-content: space-between;
 align-items: center;
 color: #CCCCCC;
-font-size: 15px;
+font-size: 13px;
 `
 
 
