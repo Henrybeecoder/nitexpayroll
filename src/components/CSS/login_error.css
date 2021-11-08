@@ -1,7 +1,7 @@
 .first-section {
     display: flex;
     height: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 70%;
 }
 .first-section img {
@@ -13,14 +13,33 @@
     border-left: 1px solid #999999;
     border-radius: 0;
     font-weight: 300;
-    padding: 10px 30px;
     margin: 20px 0;
+    width: 20%;
+    
 }
 .error-content {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     height: 100%;
+    width: 80%;
+    
+}
+.error-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 30px;
+}
+@media screen and (max-width: 800px) {
+  .first-section {
+    height: 5vh;
+  }
+  .error-text  {
+    font-size: 12px;
+  }
+  .error-close-button {
+    margin: 10px 0;
+  }
 }
 @keyframes fadeIn {
     0% {opacity:0;}

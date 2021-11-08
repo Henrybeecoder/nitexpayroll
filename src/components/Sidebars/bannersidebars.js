@@ -31,7 +31,7 @@ font-size: 50px;
 line-height: 65.45px;
 font-weight: 400;
 color: #FFFFFF;
-padding: 50px 40px 0 
+padding: 40px 40px 0 
 `
 const SmallerText = styled.p`
 color: #FFFFFF;

@@ -69,11 +69,13 @@ function LoginForm() {
                     <img src='/image/icons8-google-48.png' alt="Google icon" />
                     Sign in with Google
                 </button>
-                <Flex>
-                    <hr size="2" width="40%" color="#CCCCCC" />
+
+                <Signup>
+                    <hr size="2" color="#CCCCCC" />
                     <FadeText>or sign in with email</FadeText>
-                    <hr size="2" width="35%" color="#CCCCCC" />
-                </Flex>
+                    <hr size="2" color="#CCCCCC" />
+                </Signup>
+
                 <form onSubmit={formSubmit}>
                     <label className="email-label">
                         Email
@@ -81,6 +83,7 @@ function LoginForm() {
                     <input
                         type="text"
                         placeholder="Enter email"
+                        className="email-input"
                         value={email}
                         onChange={onEmailType}
                     />
@@ -94,6 +97,7 @@ function LoginForm() {
                     <input
                         type="password"
                         value={password}
+                        className="password-input"
                         placeholder="Enter password"
                         onChange={(e) => setPassword(e.target.value)}
                     />
@@ -121,6 +125,11 @@ const FadeText = styled.p`
 color: #666666;
 padding: 0 5px;
 font-size: 13px;
+
+`
+const Signup = styled.p`
+
+display:flex
 `
 const LoginContent = styled.div`
 width: 60%;

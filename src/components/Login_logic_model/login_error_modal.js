@@ -11,10 +11,13 @@ const LoginErrorModal = ({ modalContent, closeModal }) => {
     return (
         <Modal>
             <div className='first-section'>
-                <img src="/svg/icons8-error-50.png" />
+
                 <div className="error-content">
-                    <h5>Error</h5>
-                    <p>{modalContent}</p>
+                    <img src="/image/icons8-error-50.png" />
+                    <div className="error-text">
+                        <h5>Error</h5>
+                        <p>{modalContent}</p>
+                    </div>
                 </div>
             </div>
             <button onClick={() => closeModal} class="error-close-button">Close</button>
